@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lcevallosExamen.Login" NavigationPage.HasNavigationBar="False">
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Examen: Parcial 1" Style="{StaticResource LabelStyle}"/>
+            <Image Source="https://www.uisrael.edu.ec/wp-content/uploads/2023/01/logo-uisrael@2x-e1674848533171.png" HorizontalOptions="Center" />
+            
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="USUARIO" Grid.Column="0" Style="{StaticResource LabelStyle}"/>
+                <Entry x:Name="txtUsuario" Placeholder="Ingrese el usuario" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="CONTRASEÑA" Style="{StaticResource LabelStyle}" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtContrasena" Placeholder="Ingrese la contraseña" IsPassword="True" Grid.Row="1" Grid.Column="1"/>
+
+            </Grid>
+
+            <Button x:Name="btnIniciar" Text="INICIO DE SESION" Clicked="btnIniciar_Clicked" HorizontalOptions="Center" />
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
